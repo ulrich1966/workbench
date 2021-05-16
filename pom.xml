@@ -22,13 +22,15 @@
 
 	<scm>
 		<url>https://github.com/ulrich1966/workbenche</url>
-		<connection>scm:git:git://https://github.com/ulrich1966/workbenche.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:ulrich1966/workbenche.git</developerConnection>
+		<connection>scm:git:git://https://github.com/ulrich1966/workbench.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:ulrich1966/workbench.git</developerConnection>
 		<tag>master</tag>
 	</scm>
 
 	<modules>
 		<module>user-app</module>
+		<module>user-model</module>
+		<module>user-controller</module>
 	</modules>
 
 </project>
