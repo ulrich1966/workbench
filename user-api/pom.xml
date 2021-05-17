@@ -1,12 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>de.juli.workbench</groupId>
-    <artifactId>workbench</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>user-api</artifactId>
-  <packaging>war</packaging>
-  <name>REST Service</name>
-  <description>REST Service fuer die Benutzerverwaltung</description>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.juli.workbench</groupId>
+		<artifactId>workbench</artifactId>
+		<version>${app.version}</version>
+	</parent>
+	<artifactId>user-api</artifactId>
+	<packaging>war</packaging>
+	<name>User-REST Service</name>
+	<description>REST Service fuer die Benutzerverwaltung</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.juli.workbench</groupId>
+			<artifactId>user-model</artifactId>
+			<version>${app.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>

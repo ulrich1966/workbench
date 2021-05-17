@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.juli.workbench</groupId>
 	<artifactId>workbench</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${app.version}</version>
 	<packaging>pom</packaging>
 	<name>workbench</name>
 	<description>Basis Werkbank</description>
@@ -27,10 +27,44 @@
 		<tag>master</tag>
 	</scm>
 
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Ulrich Kloodt</name>
+			<email>post2uli at gmx.de</email>
+			<organization>Juli Apps</organization>
+			<roles>
+				<role>Developer</role>
+				<role>Contributor</role>
+			</roles>
+		</developer>
+	</developers>
+
 	<modules>
 		<module>user-app</module>
 		<module>user-model</module>
 		<module>user-controller</module>
 	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
 
 </project>
